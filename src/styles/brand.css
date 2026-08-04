@@ -1,0 +1,68 @@
+/*
+ * 뮤엘피아노 브랜드 디자인 토큰
+ * -----------------------------------------------------------------------
+ * 분석 대상: source-assets/뮤엘피아노_확정.ai (공식 확정 로고)
+ *
+ * 로고 분석 결과:
+ *  - 로고 자체는 순수 무채색(검정, #000000)의 워드마크로 제작되어 있습니다.
+ *    (별도 로고 컬러가 지정되어 있지 않음 — 흑백 인쇄/각인 등 다양한 매체에
+ *    대응하기 위한 미니멀한 브랜드 워드마크로 판단됩니다)
+ *  - 세로로 긴 비율의 정제된 타이포그래피 중심 구성이며, 장식 요소 없이
+ *    글자 자체의 굵기와 비례로 신뢰감과 전문성을 표현합니다.
+ *  - 결과적으로 "차분하고 신뢰감 있는 무채색 로고"라는 특징을 유지하면서,
+ *    게임 UI에는 피아노 학원이라는 맥락(건반의 흑백 대비, 따뜻한 우드톤,
+ *    별을 모으는 음악 여행이라는 게임 컨셉)에 맞는 보조/강조 색상을
+ *    새로 설계했습니다.
+ *
+ * 색상 설계 원칙:
+ *  - Primary(무채색 잉크 블랙)는 로고 원본 색상을 그대로 계승합니다.
+ *  - Background는 순백 대신 피아노 상아색 건반을 연상시키는 따뜻한
+ *    아이보리를 사용해 차갑지 않은 인상을 줍니다.
+ *  - Accent는 "별을 모으는 음악 여행"이라는 부제에 맞춰 따뜻한 골드를
+ *    사용, 별/콤보/신기록 등 긍정적 피드백에 사용합니다.
+ *  - Secondary는 피아노 우드 톤에 가까운 브라운 계열로, 카드 테두리나
+ *    보조 텍스트 등에 사용합니다.
+ *  - Danger(Miss)는 아이들이 위축되지 않도록 채도를 낮춘 부드러운
+ *    코랄톤을 사용합니다 (선명한 경고색 빨강 지양).
+ */
+
+:root {
+  /* Brand core */
+  --brand-primary: #2b2b2b; /* 로고 잉크 블랙 계승 */
+  --brand-primary-light: #4a4a4a;
+  --brand-secondary: #8a6f57; /* 피아노 우드 톤 브라운 */
+  --brand-secondary-light: #c9b299;
+  --brand-accent: #e8a23d; /* 별 / 골드 포인트 */
+  --brand-accent-light: #f6c877;
+  --brand-accent-dark: #c9821f;
+
+  --brand-background: #fff8ef; /* 따뜻한 아이보리 */
+  --brand-background-alt: #fbeedd;
+  --brand-surface: #ffffff;
+  --brand-surface-alt: #fff3e2;
+
+  --brand-success: #4fa97c; /* 부드러운 그린 */
+  --brand-warning: #f2a65a;
+  --brand-danger: #e8846b; /* 부드러운 코랄 (Miss 용, 자극적이지 않게) */
+
+  --text-primary: #2b2b2b;
+  --text-secondary: #7a6f63;
+  --text-inverse: #fff8ef;
+  --text-disabled: #b8ada2;
+
+  /* 판정 색상 (색상 + 도형 + 텍스트를 함께 사용, 색맹 접근성 고려) */
+  --judgment-perfect: #e8a23d;
+  --judgment-great: #4fa97c;
+  --judgment-good: #6f9bd1;
+  --judgment-miss: #e8846b;
+
+  /* 레이아웃 */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --shadow-soft: 0 8px 24px rgba(43, 43, 43, 0.12);
+  --shadow-card: 0 4px 14px rgba(43, 43, 43, 0.08);
+
+  /* 접근성: 최소 터치 영역 */
+  --touch-min: 56px;
+}

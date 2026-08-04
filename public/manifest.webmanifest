@@ -1,0 +1,18 @@
+{
+  "name": "뮤엘피아노 리듬게임",
+  "short_name": "뮤엘 리듬",
+  "description": "뮤엘피아노 어린이 피아노 리듬 학습게임",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "landscape",
+  "theme_color": "#2b2b2b",
+  "background_color": "#fff8ef",
+  "lang": "ko",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-192-maskable.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

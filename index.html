@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#2B2B2B" />
+    <meta name="description" content="뮤엘피아노 어린이 피아노 리듬 학습게임" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="뮤엘 리듬" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="icons/icon-180.png" />
+    <title>뮤엘피아노 리듬게임</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/brand.css" />
+  </head>
+  <body>
+    <div id="app-root">
+      <div id="game-container"></div>
+      <div id="orientation-guard" class="orientation-guard" aria-hidden="true">
+        <div class="orientation-guard__inner">
+          <p>기기를 가로로 돌려주세요</p>
+          <p class="orientation-guard__sub">뮤엘피아노 리듬게임은 가로 화면에 최적화되어 있어요</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

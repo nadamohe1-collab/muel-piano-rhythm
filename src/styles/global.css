@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--brand-background);
+  font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
+  overscroll-behavior: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+#app-root {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+#game-container {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  overscroll-behavior: none;
+  -webkit-touch-callout: none;
+  position: relative;
+  overflow: hidden;
+}
+
+#game-container canvas {
+  touch-action: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/*
+ * 이름 입력 화면의 HTML <input>은 위의 전역 제한(touch-action: none,
+ * user-select: none 등)을 그대로 물려받으면 가상 키보드/텍스트 선택/커서
+ * 이동이 막혀버린다. 그래서 input/textarea 요소는 명시적으로 예외 처리해
+ * 정상적인 텍스트 입력 동작(터치, 길게 눌러 커서 이동, 선택 등)을 허용한다.
+ */
+input,
+textarea {
+  touch-action: manipulation;
+  user-select: text;
+  -webkit-user-select: text;
+  -webkit-touch-callout: default;
+  overscroll-behavior: auto;
+}
+
+/* 세로 모드 안내 오버레이: 게임은 가로 모드 전용이므로 세로일 때 안내를 표시 */
+.orientation-guard {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--brand-primary);
+  color: var(--brand-surface);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+.orientation-guard__inner p {
+  margin: 8px 0;
+}
+
+.orientation-guard__inner p:first-child {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.orientation-guard__sub {
+  font-size: 15px;
+  opacity: 0.75;
+}
+
+@media (orientation: portrait) and (max-aspect-ratio: 1/1) {
+  .orientation-guard {
+    display: flex;
+  }
+}
